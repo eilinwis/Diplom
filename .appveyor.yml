@@ -1,0 +1,30 @@
+image: Ubuntu
+
+stack: jdk 11
+
+branches:
+  only:
+    - master
+
+build: off
+services:
+  mysql:
+    image: mysql:8.0
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./schema/:/docker-entrypoint-initdb.d/
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=pass
+
+
+install:
+  - java -jar ./artifacts/aqa-shop.jar
+
+
+build_script:
+  - chmod +x gradlew
+  - ./gradlew test --info -Dselenide.headless=true

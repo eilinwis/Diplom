@@ -15,7 +15,7 @@ install:
 
 artifacts:
   - path: artifacts
-    name: application.properties
+
 
 
 build_script:

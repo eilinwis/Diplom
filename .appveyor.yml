@@ -18,7 +18,7 @@ artifacts:
 
 install:
   - npm install
-  - java -jar ./artifacts/aqa-shop.jar &
+  - java -jar ./artifacts/aqa-shop.jar 
 
 
 build: off

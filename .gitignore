@@ -5,7 +5,7 @@ target/
 !**/src/test/**
 .gradle
 build/
-gradle/
+
 
 
 ### STS ###

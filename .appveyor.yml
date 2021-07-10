@@ -13,6 +13,10 @@ services:
 install:
   - java -jar ./artifacts/aqa-shop.jar
 
+artifacts:
+  - path: artifacts
+    name: application.properties
+
 
 build_script:
   - chmod +x gradlew

@@ -12,9 +12,9 @@ services:
 environment:
   nodejs_version: "6"
 
-  artifacts:
-    - path: artifacts
-    - path: gate-simulator
+artifacts:
+  - path: artifacts
+  - path: gate-simulator
 
 install:
   - npm install

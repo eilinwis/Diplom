@@ -15,6 +15,9 @@ install:
   -
 artifacts:
   - path: artifacts
+    name: application
+    type: properties
+
   - path: gate-simulator
 
 build_script:

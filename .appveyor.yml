@@ -13,7 +13,7 @@ environment:
   nodejs_version: "6"
 
 install:
-  - ps: Install node 6.9.3 x64
+  - node 6.9.3 x64
   - npm install
   - java -jar ./artifacts/aqa-shop.jar
 

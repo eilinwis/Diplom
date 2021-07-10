@@ -14,13 +14,13 @@ environment:
 
 artifacts:
   - path: artifacts
+    name: application
+
   - path: gate-simulator
 
 install:
   - npm install
   - java -jar ./artifacts/aqa-shop.jar &
-  - ./artifacts/application.properties
-
 
 build: off
 

@@ -10,12 +10,19 @@ build: off
 services:
   - mysql
 
+environment:
+  nodejs_version: "6"
+
 install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node 6
+  - npm install
   - java -jar ./artifacts/aqa-shop.jar
-  - ./gate-simulator npm start
 
 artifacts:
   - path: artifacts
+
+  - path: gate-simulator
 
 build_script:
   - chmod +x gradlew

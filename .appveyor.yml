@@ -10,12 +10,11 @@ build: off
 services:
   - mysql
 
-install:
-  - java -jar ./artifacts/aqa-shop.jar
-
 artifacts:
   - path: artifacts
 
+install:
+  - java -jar ./artifacts/aqa-shop.jar
 
 
 build_script:

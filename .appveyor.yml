@@ -20,7 +20,7 @@ artifacts:
 
 install:
   - npm install
-  - java -jar ./artifacts/aqa-shop.jar &
+  - java -jar ./artifacts/aqa-shop.jar -P:jdbc.url=jdbc:mysql://localhost:3306/app -P:jdbc.user=app -P:jdbc.password=pass &
 
 build: off
 

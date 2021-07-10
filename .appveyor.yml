@@ -12,6 +12,7 @@ services:
 
 install:
   - java -jar ./artifacts/aqa-shop.jar
+  - ./gate-simulator npm start
 
 artifacts:
   - path: artifacts

@@ -10,13 +10,12 @@ build: off
 services:
   - mysql
 
+install:
+  - java -jar ./artifacts/aqa-shop.jar
+  -
 artifacts:
   - path: artifacts
   - path: gate-simulator
-
-install:
-  - java -jar ./artifacts/aqa-shop.jar
-
 
 build_script:
   - chmod +x gradlew

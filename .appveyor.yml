@@ -12,6 +12,7 @@ services:
 
 artifacts:
   - path: artifacts
+  - path: gate-simulator
 
 install:
   - java -jar ./artifacts/aqa-shop.jar

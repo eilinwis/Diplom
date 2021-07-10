@@ -25,13 +25,10 @@ build: off
 
 install:
   - npm install
-  - sleep 15
-  - docker ps
-  - sleep 15
+  - sleep 25
+  - java -jar artifacts/aqa-shop.jar &
 
-  - java -jar aqa-shop/aqa-shop.jar &
-  - chmod +x gradlew
 
 build_script:
-
-      - ./gradlew test --info -Dselenide.headless=true
+  - chmod +x gradlew
+  - ./gradlew test --info -Dselenide.headless=true

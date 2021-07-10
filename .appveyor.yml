@@ -6,7 +6,6 @@ branches:
   only:
     - master
 
-build: off
 services:
   - mysql
 
@@ -14,8 +13,7 @@ environment:
   nodejs_version: "6"
 
 install:
-  # Get the latest stable version of Node.js or io.js
-  - ps: Install-Product node 6
+  - ps: Install-Product node 6.9.3 x64
   - npm install
   - java -jar ./artifacts/aqa-shop.jar
 
@@ -23,6 +21,7 @@ artifacts:
   - path: artifacts
 
   - path: gate-simulator
+build: off
 
 build_script:
   - chmod +x gradlew

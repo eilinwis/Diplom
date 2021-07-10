@@ -18,7 +18,6 @@ artifacts:
 
 install:
   - npm install
-  - ./Diplom/gate-simulator
   - java -jar ./artifacts/aqa-shop.jar
 
 

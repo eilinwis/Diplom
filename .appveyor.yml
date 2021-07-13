@@ -27,6 +27,7 @@ install:
   - npm install
   - sleep 25
   - java -jar artifacts/aqa-shop.jar &
+  - sleep 40
 
 
 build_script:

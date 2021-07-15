@@ -28,4 +28,3 @@ services:
     image: node-gate-simulator:1.0
     ports:
       - 9999:9999
-      

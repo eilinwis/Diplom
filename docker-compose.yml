@@ -21,8 +21,6 @@ services:
       - POSTGRES_USER=app
       - POSTGRES_PASSWORD=pass
 
-
-
   node-gate-simulator:
     build: gate-simulator
     container_name: gate-simulator

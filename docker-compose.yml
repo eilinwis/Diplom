@@ -1,5 +1,15 @@
 version: '3.3'
 services:
+  mysql-db:
+    image: mysql:latest
+    container_name: mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=pass
   postgres-db:
 
     image: postgres:latest
@@ -11,16 +21,7 @@ services:
       - POSTGRES_USER=app
       - POSTGRES_PASSWORD=pass
 
-  mysql-db:
-    image: mysql:latest
-    container_name: mysql
-    ports:
-      - 3306:3306
-    environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
-      - MYSQL_DATABASE=app
-      - MYSQL_USER=app
-      - MYSQL_PASSWORD=pass
+
 
   node-gate-simulator:
     build: gate-simulator

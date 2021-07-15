@@ -8,6 +8,8 @@ import static com.codeborne.selenide.Selenide.$;
 import Data.DataGenerator;
 import Page.Cash;
 import SQL.SqlHelperCredit;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 
 import java.time.Duration;
@@ -18,6 +20,17 @@ import static com.codeborne.selenide.Selenide.open;
 public class CreditTest {
     Cash cash = new Cash();
     DataGenerator dataGenerator = new DataGenerator();
+
+
+    @BeforeAll
+    static void SetUpAll() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
+
+    @AfterAll
+    static void tearDownAll() {
+        SelenideLogger.removeListener("allure");
+    }
 
     @BeforeEach
     void setup() {
